@@ -32,6 +32,8 @@ class Server:
     DATA_FILE = 'Popular_Baby_Names.csv'
 
     def __init__(self):
+        """This is the initializing function
+        """
         self.__dataset = None
 
     def dataset(self) -> List[List]:
@@ -46,6 +48,8 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """This function returns content of page
+        """
         # return list(index_range(page, page_size))
         assert isinstance(
             page, int) and page > 0, "must be a positive integer"
