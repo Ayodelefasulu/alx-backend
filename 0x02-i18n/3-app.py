@@ -31,6 +31,7 @@ def index():
     """
     return render_template('3-index.html')
 
+
 @app.context_processor
 def inject_locale():
     """
