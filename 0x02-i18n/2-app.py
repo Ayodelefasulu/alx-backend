@@ -44,6 +44,14 @@ def index() -> str:
 
     :return: Rendered index.html template.
     """
+    #print(request.headers.get('Accept-Language'))
+    #print(request.headers.get('Accept-Language'))
+    #print(request)
+    #print(request.headers)
+    #for k, v in request.headers.items():
+    #    print("{}: {}".format(k, v))
+    print("-----")
+    print(request.accept_languages)
     return render_template('2-index.html')
 
 
