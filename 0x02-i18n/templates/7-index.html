@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ get_locale() }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ _('Welcome') }}</title>
+</head>
+<body>
+    <h1>{{ _('Welcome to the site') }}</h1>
+    <p>
+        {% if g.user %}
+            {{ _('You are logged in as') }} {{ g.user.name }}
+        {% else %}
+            {{ _('You are not logged in.') }}
+        {% endif %}
+    </p>
+    <p>
+        {{ _('Current time zone: ') }} {{ timezone }}
+    </p>
+</body>
+</html>

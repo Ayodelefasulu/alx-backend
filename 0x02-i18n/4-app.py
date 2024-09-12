@@ -7,7 +7,7 @@ It includes functionality to detect and set locale from URL parameters.
 """
 
 from flask import Flask, request, render_template
-from flask_babel import Babel, _
+from flask_babel import Babel, get_locale, _
 
 
 app = Flask(__name__)
@@ -36,6 +36,13 @@ def index() -> str:
     Render the index page with localized content.
     """
     return render_template('4-index.html')
+
+@app.context_processor
+def inject_locale() -> str:
+    """
+    Returns the default browser language setting
+    """
+    return {'get_locale': get_locale}
 
 
 if __name__ == '__main__':
