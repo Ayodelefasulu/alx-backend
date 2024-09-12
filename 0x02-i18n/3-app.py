@@ -23,7 +23,7 @@ babel = Babel(app)
 
 
 @app.route('/')
-def index():
+def index() -> str:
     """
     Renders the index page, which will display in the detected language.
 
@@ -33,7 +33,7 @@ def index():
 
 
 @app.context_processor
-def inject_locale():
+def inject_locale() -> str:
     """
     Returns the default browser language setting
     """
